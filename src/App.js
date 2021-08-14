@@ -16,7 +16,7 @@ export default class App extends React.Component {
   }
   
   componentDidMount(){
-    axios.get('http://hn.algolia.com/api/v1/search?query=&tags=story')
+    axios.get('https://hn.algolia.com/api/v1/search?query=&tags=story')
     .then((res) => {
       console.log('This is the data', res.data.hits)
       this.setState({
@@ -30,7 +30,7 @@ export default class App extends React.Component {
   }
 
   searchHN(word){
-    axios.get(`http://hn.algolia.com/api/v1/search?query=${word}&tags=story`)
+    axios.get(`https://hn.algolia.com/api/v1/search?query=${word}&tags=story`)
     .then((res) => {
       console.log('This is the data', res.data.hits)
       this.setState({
